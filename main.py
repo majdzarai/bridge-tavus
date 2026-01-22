@@ -260,6 +260,7 @@ async def list_models():
 
 
 @app.post("/v1/chat/completions")
+@app.post("/chat/completions")  # Tavus calls this without /v1 prefix
 async def chat_completions(request: ChatCompletionRequest):
     """Main endpoint - handles chat completions from Tavus."""
     
